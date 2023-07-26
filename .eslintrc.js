@@ -9,7 +9,7 @@ module.exports = {
     },
     extends: [
         'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-        'prettier', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier// disables react-specific linting rules that conflict with prettier
+        'prettier', // Uses prettier
     ],
     parserOptions: {
         project: path.resolve(__dirname, './tsconfig.client.json'),
@@ -27,7 +27,6 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         "@typescript-eslint/no-explicit-any": "off",
-        // These rules don't add much value, are better covered by TypeScript and good definition files
         'react/no-direct-mutation-state': 'off',
         'react/no-deprecated': 'off',
         'react/no-string-refs': 'off',
