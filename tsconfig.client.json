@@ -1,9 +1,13 @@
 {
-  "include": ["src/client", "**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+  "include": ["src/client"],
   "exclude": ["node_modules"],
   "compilerOptions": {
+    "typeRoots": [
+        "./node_modules/@types",
+        "./src/client/types"
+    ],
     "allowJs": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "target": "es5",
     "jsx": "react",
     "lib": ["dom", "es2017", "dom.iterable"],
@@ -16,5 +20,14 @@
     "strictNullChecks": true,
     "noImplicitAny": true,
     "esModuleInterop":true
-  }
+  },
+  "plugins": [
+      {
+          "transform": "typescript-plugin-styled-components",
+          "type": "config",
+          // other typescript-plugin-styled-components options can be added here
+          "minify": true,
+          "ssr": true
+      }
+  ]
 }

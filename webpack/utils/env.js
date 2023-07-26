@@ -1,7 +1,4 @@
-/**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
- */
-const { join } = require ('path');
+const { join } = require('path');
 
 const mode = process.env.NODE_ENV ?? 'production';
 const isDevServer = process.env.WEBPACK_IS_DEV_SERVER === 'true';

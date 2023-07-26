@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { MyKnownError } from '../../types/common';
 
 export const fetchUser = createAsyncThunk<any, void>('user/fetchUser', async () => {
   const response = await axios
