@@ -32,7 +32,6 @@
             '@babel/plugin-proposal-export-namespace-from',
             '@babel/plugin-proposal-throw-expressions',
             '@babel/plugin-proposal-object-rest-spread',
-            // Applies the react-refresh Babel plugin on non-production modes only
             mode !== 'production' && 'react-refresh/babel',
         ].filter(Boolean),
     };

@@ -1,6 +1,3 @@
-/**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
- */
 const { arrayFilterEmpty } = require('../utils/helper');
 const {
     cssLoader,

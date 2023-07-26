@@ -1,7 +1,3 @@
-/**
- * Created by: Andrey Polyakov (andrey@polyakov.im)
- * @see https://webpack.js.org/configuration/dev-server/
- */
 const isWindows = require('is-windows');
 const path = require('path');
 const { devServerProxyConfig } = require('./devServerProxy');
