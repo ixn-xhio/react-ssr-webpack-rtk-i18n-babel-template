@@ -49,6 +49,7 @@ app.get('*', async (req: Request, res: Response) => {
             ${helmet.title.toString()}
             ${helmet.meta.toString()}
             ${helmet.link.toString()}
+            <link rel="manifest" href="/manifest.json" />
           </head>
         <body>`)
         res.write(`<div id="root">`);
