@@ -15,6 +15,7 @@
                     useBuiltIns: 'usage',
                     debug: false,
                     corejs: 3,
+                    modules: "auto",
                 },
             ],
             '@babel/preset-react',
