@@ -1,8 +1,8 @@
-const { manifestPlugin } = require('./manifestPlugin');
+const { manifestPlugin } = require('./pluginManifest');
 const { cleanWebpackPlugin } = require('./pluginCleanWebpack');
-const { copyPlugin } = require('./CopyPlugin');
-const { definePlugin } = require('./DefinePlugin');
-const { esLintPlugin } = require('./ESLintPlugin');
+const { copyPlugin } = require('./pluginCopy');
+const { definePlugin } = require('./pluginDefine');
+const { esLintPlugin } = require('./pluginESLint');
 const { forkTsCheckerWebpackPlugin } = require('./pluginForkTsChecker');
 const { miniCssExtractPlugin } = require('./pluginMiniCssExtract');
 
