@@ -32,6 +32,7 @@ module.exports = {
         'react/no-string-refs': 'off',
         'react/require-render-return': 'off',
         'prefer-const': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
         'react/jsx-filename-extension': [
             'warn',
             {
