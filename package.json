@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.server.js && webpack --config webpack.config.client.js",
-    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.server.js && webpack --config webpack.config.client.js",
     "start": "node ./dist/server.js",
     "start:dev": "cross-env WEBPACK_IS_DEV_SERVER=true NODE_ENV=development webpack serve --config webpack.config.client.js",
     "test": "jest --env=jsdom",
