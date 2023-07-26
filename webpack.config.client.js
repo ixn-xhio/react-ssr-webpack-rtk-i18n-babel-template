@@ -1,6 +1,10 @@
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
+//plugins
+const plugins = require("./webpack/plugins");
+const rules = require("./webpack/rules");
+
+//utils
+const { arrayFilterEmpty } = require("./webpack/utils/helper");
 
 module.exports = {
   name: "client",
@@ -17,16 +21,20 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js"],
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        loader: "ts-loader",
-        options: {
-          configFile: "tsconfig.client.json",
-        },
-      },
-    ],
+    rules: arrayFilterEmpty([
+      rules.commonRules.javascriptRule,
+      rules.commonRules.typescriptRule,
+      rules.commonRules.imagesRule,
+      rules.commonRules.fontsRule,
+      rules.stylesRules.cssRule,
+      ...rules.stylesRules.lessRules,
+      ...rules.stylesRules.sassRules,
+      ...rules.svgRules.svgRules,
+  ]),
   },
-  target: "web",
-  plugins: [new CleanWebpackPlugin(), new WebpackManifestPlugin()],
+  target: ['web', 'es5'],
+  plugins: arrayFilterEmpty([
+    plugins.cleanWebpackPlugin, 
+    plugins.manifestPlugin
+  ]),
 };
