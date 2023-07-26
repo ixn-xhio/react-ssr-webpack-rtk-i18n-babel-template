@@ -40,11 +40,11 @@ export const formatDate = (date: any) => {
 }
 
 export const calculateAge = (birthday: any, lapse?: any) => { // birthday is a date
-    var castedLapse = lapse ? new Date(lapse).valueOf() : Date.now()
-    var castedBirthday = new Date(birthday).valueOf()
+    let castedLapse = lapse ? new Date(lapse).valueOf() : Date.now()
+    let castedBirthday = new Date(birthday).valueOf()
 
-    var ageDifMs = castedLapse - castedBirthday;
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    let ageDifMs = castedLapse - castedBirthday;
+    let ageDate = new Date(ageDifMs); // miliseconds from epoch
     const result = ageDate.getUTCFullYear() - 1970
     const response = result.toLocaleString( 'en-US', { maximumFractionDigits: 1 , minimumFractionDigits: 0 })
     return response;

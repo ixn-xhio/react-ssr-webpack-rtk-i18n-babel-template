@@ -19,8 +19,8 @@ export const embeddedDataLayer = (w: Window, d: Document, s: 'script', l: string
         'event': 'gtm.js'
     });
 
-    var dl = l !== 'dataLayer' ? '&l='+l : '';
-    var src = 'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    let dl = l !== 'dataLayer' ? '&l='+l : '';
+    let src = 'https://www.googletagmanager.com/gtm.js?id='+i+dl;
 
     if(!verifyScript(src)) {
         const js: HTMLScriptElement = d.createElement(s);
@@ -35,12 +35,13 @@ export const embeddedScriptsGA = (w: Window, d: Document, s: 'script', l: string
     const g = (w as any).gapi || ((w as any).gapi = {});
     g.analytics={
         q: [],
+        // eslint-disable-next-line @typescript-eslint/ban-types
         ready: function(cb: Function) {
             this.q.push(cb);
         }
     }
 
-    var src = 'https://apis.google.com/js/platform.js';
+    let src = 'https://apis.google.com/js/platform.js';
 
     if(!verifyScript(src)) {
         const js: HTMLScriptElement = d.createElement(s);
