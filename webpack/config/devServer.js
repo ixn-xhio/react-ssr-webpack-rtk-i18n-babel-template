@@ -1,7 +1,5 @@
 const isWindows = require('is-windows');
-const path = require('path');
 const { devServerProxyConfig } = require('./devServerProxy');
-const { rootDir } = require('../utils/env');
 
 const defaultPort = 3000;
 
