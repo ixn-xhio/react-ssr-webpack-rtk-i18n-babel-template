@@ -5,15 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 
 
 if(IS_DEV_SERVER){
-    const root = ReactDOM.createRoot(
+    ReactDOM.createRoot(
         document.getElementById('root')!
-    );
-    
-    root.render(
+    ).render(
         <BrowserRouter>
             <Routing/>
         </BrowserRouter>
-    )
+    );
 } else {
     ReactDOM.hydrateRoot(
         document.getElementById('root') as any, 
